@@ -5,25 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
             <div class="search">
-                <input type="search">
+                <label for="search"><span class="mdi mdi-magnify"></span></label>
+                <input type="search" id="search">
             </div>
             <div class="menu">
                 <ul>
-                    <li>Morgan Oakley</li>
+                    <li><span id="not" class="mdi mdi-bell-ring-outline"></span></li>
+                    <li class="images"><img src="images/toutou.png" alt="dog picture"></li>
+                    <li id="name">Morgan Oakley</li>
                 </ul>
             </div>
         </div>
         <div class="nav">
             <div class="logo">
-                <div class="photo"></div>
                 <div class="intro">
-                    <p id="mini">Hi there,</p>
-                    <p id="great">Morgan Oakley (@morgan)</p>
+                    <div class="images">
+                        <img src="images/toutou.png" alt="dog picture">
+                    </div>
+                    <div>
+                        <p id="mini">Hi there,</p>
+                        <p id="great">Morgan Oakley (@morgan)</p>
+                    </div>
                 </div>
             </div>
             <div class="nav-item">
@@ -36,23 +44,23 @@
         </div>
         <div class="side-bar">
             <div class="side-title">
-                <p>Dashboard</p>
+                <p><span class="mdi mdi-view-grid"></span>Dashboard</p>
             </div>
             <div class="side-info">
                 <ul>
-                    <li>Home</li>
-                    <li>Profile</li>
-                    <li>Messages</li>
-                    <li>History</li>
-                    <li>Tasks</li>
-                    <li>Communities</li>
+                    <li> <span class="mdi mdi-home"></span> Home</li>
+                    <li><span class="mdi mdi-card-account-details-outline"></span>Profile</li>
+                    <li><span class="mdi mdi-message-reply"></span>Messages</li>
+                    <li><span class="mdi mdi-clock-time-four"></span>History</li>
+                    <li><span class="mdi mdi-file-multiple"></span>Tasks</li>
+                    <li><span class="mdi mdi-account-group"></span>Communities</li>
                 </ul>
             </div>
             <div class="side-manage">
                 <ul>
-                    <li>Settings</li>
-                    <li>Support</li>
-                    <li>Privacy</li>
+                    <li><span class="mdi mdi-cog"></span>Settings</li>
+                    <li><span class="mdi mdi-help-box"></span>Support</li>
+                    <li><span class="mdi mdi-shield-lock"></span>Privacy</li>
                 </ul>
             </div>
         </div>
@@ -67,6 +75,11 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae diam accumsan, efficitur 
                             ipsum non, euismod purus. In sit amet placerat lorem, ut dictum nisl.
                         </p>
+                        <div>
+                            <span class="mdi mdi-star-plus-outline"></span>
+                            <span class="mdi mdi-eye-plus"></span>
+                            <span class="mdi mdi-share-variant-outline"></span>
+                        </div>
                     </div>
                     <div>
                         <p class="title1">Less Cool Project</p>
@@ -74,6 +87,11 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus eu ex vel condimentum. 
                             Nam quis tempus urna, mattis pharetra purus. Fusce ornare, odio sed.
                         </p>
+                        <div>
+                            <span class="mdi mdi-star-plus-outline"></span>
+                            <span class="mdi mdi-eye-plus"></span>
+                            <span class="mdi mdi-share-variant-outline"></span>
+                        </div>
                     </div>
                     <div>
                         <p class="title1">Impossible App</p>
@@ -82,6 +100,11 @@
                             Vestibulum aliquet metus neque, semper euismod urna feugiat eget. 
                             Mauris fringilla semper sem venenatis cursus. Nam commodo.
                         </p>
+                        <div>
+                            <span class="mdi mdi-star-plus-outline"></span>
+                            <span class="mdi mdi-eye-plus"></span>
+                            <span class="mdi mdi-share-variant-outline"></span>
+                        </div>
                     </div>
                     <div>
                         <p class="title1">Easy Peasy App</p>
@@ -89,6 +112,11 @@
                             dolor sit amet, consectetur adipiscing elit. Cras vitae leo quis sem mattis imperdiet 
                             id ut nibh. Lorem ipsum dolor sit amet, consectetur adipiscing.
                         </p>
+                        <div>
+                            <span class="mdi mdi-star-plus-outline"></span>
+                            <span class="mdi mdi-eye-plus"></span>
+                            <span class="mdi mdi-share-variant-outline"></span>
+                        </div>
                     </div>
                     <div>
                         <p class="title1">Ad Blocker</p>
@@ -96,6 +124,11 @@
                             consectetur adipiscing elit. In bibendum iaculis ipsum placerat accumsan. 
                             Sed nec mauris ac elit ullamcorper malesuada vitae at nisi. Ut.
                         </p>
+                        <div>
+                            <span class="mdi mdi-star-plus-outline"></span>
+                            <span class="mdi mdi-eye-plus"></span>
+                            <span class="mdi mdi-share-variant-outline"></span>
+                        </div>
                     </div>
                     <div>
                         <p class="title1">Money Maker</p>
@@ -103,6 +136,11 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum tempor sodales. 
                             Duis a nisi nibh. Mauris a egestas mi. Aenean sit amet libero lacus.
                         </p>
+                        <div>
+                            <span class="mdi mdi-star-plus-outline"></span>
+                            <span class="mdi mdi-eye-plus"></span>
+                            <span class="mdi mdi-share-variant-outline"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,20 +171,40 @@
             <h2>Trending</h2>
                 <div>
                     <div>
-                        <p class="title2">@tegan</p>
-                        <p>World Peace Builder</p>
+                        <div class="images">
+                            <img src="images/toutou.png" alt="">
+                        </div>
+                        <div>
+                            <p class="title2">@tegan</p>
+                            <p>World Peace Builder</p>
+                        </div>
                     </div>
                     <div>
-                        <p class="title2">@morgan</p>
-                        <p>Super cool Project</p>
+                        <div class="images">
+                            <img src="images/toutou.png" alt="">
+                        </div>
+                        <div>
+                            <p class="title2">@morgan</p>
+                            <p>Super cool Project</p>
+                        </div>
                     </div>
                     <div>
-                        <p class="title2">@kendall</p>
-                        <p>Life Changing App</p>
+                        <div class="images">
+                            <img src="images/toutou.png" alt="">
+                        </div>
+                        <div>
+                            <p class="title2">@kendall</p>
+                            <p>Life Changing App</p>
+                        </div>
                     </div>
                     <div>
-                        <p class="title2">@alex</p>
-                        <p>No Traffic Maker</p>
+                        <div class="images">
+                            <img src="images/toutou.png" alt="">
+                        </div>
+                        <div>
+                            <p  class="title2"> @alex</p>
+                            <p>No Traffic Maker</p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,12 @@
+@font-face {
+    font-family: "roboto";
+    src: url(font/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
+}
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "roboto";
 }
 body{
     background-color: #e4eaf1;
@@ -18,15 +23,17 @@ ul{
 .header{
     grid-column: 2/5;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding: 20px 0 0 60px;
-    padding-bottom: 10px;
+    grid-template-columns: 3fr 1fr;
+    padding: 15px 0 0 60px;
     background-color: white;
+    align-items: center;
 }
 .header .search{
     grid-column: 1/2;
 }
 .header .search input{
+    outline: none;
+    border: none;
     width: 80%;
     height: 30px;
     border-radius: 12px;
@@ -35,18 +42,37 @@ ul{
 .header .menu{
     grid-column: 2/3;
     display: grid;
-    justify-items: end;
-
+    grid-template-columns: 1fr;
+ justify-items: center;
 }
+.header .menu ul{
+   display:grid;
+   grid-template-columns: repeat(2,1fr) 2fr;
+   align-items: center;
+   padding-right:90px ;
+}
+#not{
+    padding-left: 20px;
+}
+#name{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
 .nav{
     grid-column: 2/5;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    padding: 20px 0 20px 60px;
+    padding: 20px 0 18px 60px;
     background-color: white;
 }
 .nav .logo{
     grid-column: 1/2;
+}
+.nav .intro{
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    align-items: center;
 }
 .nav .nav-item {
     grid-column: 2/3;
@@ -58,22 +84,30 @@ ul{
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
+#mini{
+    font-size: 0.8em;
+    font-weight: 500;
+}
+#great{
+    font-size: 1.3em;
+    font-weight: 700;
+}
 .nav .nav-item ul li button{
     background-color: #2196f3;
-    width: 90px;
-    height: 30px;
+    width: 100px;
+    height: 40px;
     color: white;
     border: none;
-    border-radius: 14px;
+    border-radius: 18px;
 }
 .side-bar{
-    padding: 15px 0 0 15px;
+    padding: 30px 0 0 35px;
     grid-row: 1/6;
     grid-column: 1/2;
     background-color: #2196f3;
 }
 .side-bar>div{
-    padding-bottom:40px ;
+    padding-bottom:43px ;
 }
 .side-title, .side-bar ul li{
     font-size: 1.5em;
@@ -81,9 +115,10 @@ ul{
     color: white;
 }
 .side-bar ul li{
-    margin-top:10px ;
+    margin-top:18px ;
     
 }
+ 
 .main{
     grid-column: 2/5;
     grid-row: 3/6;
@@ -105,14 +140,21 @@ ul{
     grid-template-columns: repeat(2,1fr);
     gap: 40px;
 }
-.main-project div>div{
+.main-project>div>div{
     height: 247px;
     padding: 40px;
     width: 520px;
     background-color: white;
     border-radius: 9px;
     border-left: 6px solid orange;
+    position: relative;
 }
+.main-project>div>div>div{
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+}
+
 .main-announce{
     grid-column: 3/4;
     grid-row: 3/5;
@@ -132,9 +174,11 @@ ul{
     grid-column: 3/4;
     grid-row: 5/6;
     margin-left: 50px;
+    margin-top: 15px;
     
 }
 .main-trending>div{
+    
     height: 350px;
     width: 420px;
     padding: 40px; 
@@ -142,7 +186,10 @@ ul{
     border-radius: 9px;
 }
 .main-trending>div>div{
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
 }
 h2{
     margin-bottom: 5px;
@@ -159,4 +206,20 @@ h2{
 }
 hr{
     margin: 12px 2px;
+}
+
+span{
+    padding-right:20px ;
+}
+.images{
+    width: 42.5px;
+    height: 42.5px;
+    background-color: red;
+    align-content: center;
+    text-align: center;
+    border-radius: 100%;
+}
+img{
+    width: 30px;
+    height: 30px;
 }
